@@ -72,7 +72,7 @@ object Utils {
         val locale = Locale("ru")
         return ((if (firstName.isNullOrBlank()) "" else firstName.subSequence(0,1).toString().toUpperCase(locale)) +
                 if (lastName.isNullOrBlank()) "" else lastName.subSequence(0,1).toString().toUpperCase(locale)).let {
-                    if (it == "") "null" else it
+                    if (it == "") null else it
                 }
     }
 
